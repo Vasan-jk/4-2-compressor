@@ -1,0 +1,8 @@
+module compressor4_2(sum,carry,cout, m1,m2,m3,m4,cin);
+    output sum,carry,cout;
+    input m1,m2,m3,m4,cin;
+
+	  wire w1;
+
+	 FA f1(w1,cout,m1,m2,m3);
+	 FA f2(sum,carry,w1,m4,cin);
