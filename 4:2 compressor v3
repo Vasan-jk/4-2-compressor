@@ -1,0 +1,14 @@
+module approx4_2v2(c,s, x4,x3,x2,x1);
+    output s,c;
+    input x4,x3,x2,x1;
+	 
+	 wire w1,w2,w3;
+
+	 or(w1,x1,x2);
+	 and(w2,x1,x2);
+	 or(w3,w2,x3);
+	 FA f1(s,c,w1,x4,w3);
+		 
+		
+
+endmodule
