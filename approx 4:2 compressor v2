@@ -1,0 +1,14 @@
+module approx4_2v2(c,s, x4,x3,x2,x1);
+    output s,c;
+    input x4,x3,x2,x1;
+
+		wire w1,w2,w3,w4,w5;
+	 	xor(w1,x1,x2);
+		nand(w2,x1,x2);
+		xor(w3,x3,x4);
+		mux2_1 m1(s, w1,~w1,w3);
+		nand(w4,w1,w3);
+		nand(w5,x3,x4);
+		nand(c,w2,w4,w5);
+
+endmodule
